@@ -14,3 +14,25 @@ Program output:
 yourName@elec>make clean
 yourName@elec>make all
 yourName@elec>./bst < testFile.txt
+
+Example Output:
+
+input count: 9
+input: 10 3 20 19 12 6 5 8 7 
+
+Printing Binary Search Tree
+value: 10	level :0
+value: 3	level :1
+value: 20	level :1
+value: 6	level :2
+value: 19	level :2
+value: 5	level :3
+value: 8	level :3
+value: 12	level :3
+value: 7	level :4
+
+
+Max Tree Height : 4
+Max Width : 3
+Max Width level : 3
+
