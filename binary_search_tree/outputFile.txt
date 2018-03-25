@@ -1,0 +1,20 @@
+test 1
+Max Tree Height : -1
+
+
+
+**TEST 2**
+Tree Height : 4
+Maximum Width : 3
+Maximum Width Level : 3
+
+
+**TEST 3**
+Tree Height : 8
+Maximum Width : 1
+Maximum Width Level : 8
+
+**TEST 4**
+Tree Height : 2
+Maximum Width : 2
+Maximum Width Level : 2
