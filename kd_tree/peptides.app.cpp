@@ -229,7 +229,6 @@ output: none
 ****************************************************************************/
 void PeptidesApp::create_tree_start()
 {
-	;
 	int level = 0;			//sorts according to level, 0 == mass, 1 == NET
 	int index_i = 0;		//index of first element in the list
 	int index_e = size - 1; //index of last element in the list
