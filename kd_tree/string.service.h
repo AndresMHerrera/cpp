@@ -6,6 +6,11 @@
 #include <cstring>
 #include <cstdlib>
 #include <vector>
+#include <algorithm>
+#include <functional>
+#include <cctype>
+#include <locale>
+
 using namespace std;
 
 class StringService
@@ -14,7 +19,13 @@ public:
 
 	StringService();
 	~StringService();
-    string trimLeadingAndTrailingSpaces(string input);
+	
+	string & ltrim(std::string &s);
+	string & rtrim(std::string &s);
+	string & trimLeadingAndTrailingSpaces(string &s);
+
+
+
 };
 
 #endif

@@ -1,4 +1,5 @@
 #include "peptides.app.h"
+#include "string.service.h"
 
 int main(int argc, char const *argv[])
 {

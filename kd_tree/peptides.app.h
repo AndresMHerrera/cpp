@@ -44,7 +44,7 @@ private:
 	hash_table aminoAcidsHashTable;
 	int size; // TODO: get rid of this and use a vector on peptideDatabase
 
-	c_node ** peptideDatabase;
+	c_node ** peptideDatabase; // TODO: #1 priority - Create a Service for this
 	kd_tree tree;
 
 public:	

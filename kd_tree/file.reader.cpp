@@ -19,7 +19,8 @@ vector<string> FileReader::readFileByLine(string fileName)
         while (!file.eof())
         {
             getline(file, line, '\n');
-            line = this->stringService.trimLeadingAndTrailingSpaces(line);
+            // line = this->stringService.trimLeadingAndTrailingSpaces(line);
+            this->stringService.trimLeadingAndTrailingSpaces(line);
 
             if (!line.empty())
             {
