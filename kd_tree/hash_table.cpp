@@ -82,4 +82,5 @@ void hash_table::printHashTable()
 			cout << "key:" << this->table[i]->key << ", value:" << this->table[i]->value << endl;
 		}
 	}
+	cout << endl;
 }
