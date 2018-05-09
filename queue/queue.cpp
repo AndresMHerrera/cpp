@@ -116,14 +116,10 @@ void queue<T>::deque()
 }
 
 /********************************************************
-Description : The purpose of this function is to delete
-			a node from the queue (the front node).
+Description : The purpose of this function is to return
+				the next value is the queue.
 
 precondition : The queue must not be NULL.
-
-postcondition : The front node will be deleted, including
-			the there is any dublicate nodes that have 
-			the same value. 
 *******************************************************/
 template <class T>
 T queue<T>::peek() {
@@ -150,9 +146,8 @@ bool queue<T>::isEmpty()
 
 
 /***************************************************
-Description : The purpose of this function is count
-			the number of nodes in the queue to 
-			determine the size.
+Description : The purpose of this function is to
+				return the length of the queue.
 
 precondition : none
 

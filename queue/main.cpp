@@ -1,11 +1,6 @@
 /********************************************************************
 * Author        :       Herrera, Andres
 * File          :       main.cpp
-*
-* Purpose :
-*       This file contains the main function which creates an
-*		instance of a binary search tree, and begins reading
-*		user input.
 *********************************************************************/
 #include "queue.cpp"
 #include <iomanip>
