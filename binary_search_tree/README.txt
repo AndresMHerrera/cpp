@@ -1,4 +1,4 @@
-Write a program in C++ called that reads a list of positive and negative integers
+Write a program in C++ that reads a list of positive and negative integers
 from user input (i.e. standard input) until a “END” statement is entered. The program should
 not display any text prompting the user for input. It should just start reading from standard
 input.
