@@ -1,8 +1,8 @@
 CC=g++
 CXXFLAGS=-I.
 ODIR=obj
-DEPS = binary.search.tree.h stack.h queue.h stdin.reader.h
-OBJ = binary.search.tree.o stack.o queue.o main.o stdin.reader.o
+DEPS = binary.search.tree.h stdin.reader.h
+OBJ = binary.search.tree.o main.o stdin.reader.o
 
 all: bst
 

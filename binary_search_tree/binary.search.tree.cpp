@@ -1,6 +1,4 @@
 #include "binary.search.tree.h"
-#include "stack.cpp"
-#include "queue.cpp"
 
 BinarySearchTree::BinarySearchTree()
 {
@@ -150,6 +148,7 @@ Tree_Node::Tree_Node(int insertValue, int level)
 	Duplicate = EMPTY;
 }
 
+
 /*********************************************************
 Description : The purpose of this function is to determine
 			the maximum height of the binary search tree, 
@@ -166,14 +165,14 @@ int BinarySearchTree::calculateTreeHeight()
 
 	if (Root != EMPTY)
 	{
-
-		stack<Tree_Node *> S;	//used for backtracking
+		stack<Tree_Node *> S; //used for backtracking
 		Tree_Node *march = Root; //used to traverse the tree
 
 		S.push(march);
+
 		maxHeight = S.size();
 
-		while (!S.is_empty())
+		while (!S.empty())
 		{
 			if (march->Left_Child != EMPTY && march->Left_Child->visited == false)
 			{
@@ -195,16 +194,17 @@ int BinarySearchTree::calculateTreeHeight()
 
 				S.pop();
 
-				if (!S.is_empty())
+				if (!S.empty())
 				{
 					march->visited = true;
-					march = S.return_top();
+					march = S.top();
 				}
 			}
 		}
 	}
 	return (maxHeight - 1);
 }
+
 
 /************************************************************
 Description : The purpose of this function is to determine 
@@ -227,25 +227,25 @@ void BinarySearchTree::calculateTreeWidth()
 		int currentLevel = 0;
 		int maxWidth = 0;
 
-		Q.enque(march_p);
+		Q.push(march_p);
 		maxWidth = Q.size();
 
-		while (!Q.is_empty())
+		while (!Q.empty())
 		{
-
-			march_p = Q.deque_andReturn();
+			march_p = Q.front();
+			Q.pop();
 
 			//insert children into queue
 			if (march_p->Left_Child != EMPTY)
-				Q.enque(march_p->Left_Child);
+				Q.push(march_p->Left_Child);
 
 			if (march_p->Right_Child != EMPTY)
-				Q.enque(march_p->Right_Child);
+				Q.push(march_p->Right_Child);
 
 			//check if maxWidth and maxWidth level need to be updated
-			if (!Q.is_empty())
+			if (!Q.empty())
 			{
-				if (Q.getFront()->node_level != currentLevel)
+				if (Q.front()->node_level != currentLevel)
 				{
 					if (maxWidth <= Q.size())
 					{
@@ -261,6 +261,7 @@ void BinarySearchTree::calculateTreeWidth()
 	}
 }
 
+
 void BinarySearchTree::breadthFirstPrint()
 {
 	if (this->Root != EMPTY)
@@ -268,19 +269,20 @@ void BinarySearchTree::breadthFirstPrint()
 		queue<Tree_Node *> Q;
 		Tree_Node *march_p = Root;
 
-		Q.enque(march_p);
+		Q.push(march_p);
 
-		while (!Q.is_empty())
+		while (!Q.empty())
 		{
-			march_p = Q.deque_andReturn();
+			march_p = Q.front();
+			Q.pop();
 
 			cout << "value: " << march_p->Search_Key << '\t' << "level :" << march_p->node_level << endl;
 
 			if (march_p->Left_Child != EMPTY)
-				Q.enque(march_p->Left_Child);
+				Q.push(march_p->Left_Child);
 
 			if (march_p->Right_Child != EMPTY)
-				Q.enque(march_p->Right_Child);
+				Q.push(march_p->Right_Child);
 		}
 	}
 }

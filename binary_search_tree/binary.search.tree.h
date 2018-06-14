@@ -16,10 +16,13 @@
 #include <sstream>
 #include <cstdlib>
 #include <vector>
+#include <stack>
+#include <queue>
 
 #define NOT_VISITED false
 #define VISITED true
 #define INITIALIZE 0
+#define EMPTY NULL
 
 using namespace std;
 
